@@ -38,10 +38,10 @@ La SUPCUP, c’est LA compétition de cheerleading entre les écoles de Rouen. D
 
 1. **Téléchargez et configurez**  
    - Installez **Python** depuis [python.org](https://python.org).  
-   - Sauvegardez ce script (`LetsBeatTheSTAPS.py`) et le fichier batch (`run_LetsBeatTheSTAPS.bat`) dans le même dossier.
+   - Sauvegardez ce script (`LetsBeatTheSTAPS.py`) et le fichier batch (`run.bat`) dans le même dossier.
 
 2. **Double-cliquez pour dominer**  
-   - Lancez `run_LetsBeatTheSTAPS.bat`.  
+   - Lancez `run.bat`.  
    - Observez la magie se produire alors que les points de l’INSA Rouen explosent.
 
 3. **Relaxez et savourez** 🎯  
@@ -81,9 +81,14 @@ Pas de panique. Même s’ils le savent, ils ne pourront pas rivaliser avec notr
 ---
 
 ### **Avertissement**
+
 - Soyez responsable. Jouons avec classe (ou presque 😉).  
 - N’en abusez pas – trop de gloire peut devenir suspect.  
-- Amusez-vous, mais surtout **faites gagner l’INSA Rouen !**
+- Amusez-vous, mais surtout **faites gagner l’INSA Rouen !**  
+- Vous êtes libres de faire ce que vous voulez avec ce script, mais **son utilisation est sous votre entière responsabilité.**  
+- **Je décline toute responsabilité** quant à l’usage que vous en faites, que ce soit dans le cadre de la SUPCUP ou ailleurs. Les conséquences, qu'elles soient juridiques, éthiques ou autres, sont uniquement de votre ressort.  
+
+### **En résumé : soyez malins, mais restez responsables !** 💙💛
 
 ---
 
