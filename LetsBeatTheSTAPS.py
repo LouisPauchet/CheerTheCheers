@@ -11,6 +11,37 @@ from selenium.webdriver.edge.options import Options
 from threading import Thread
 from queue import Queue
 import subprocess
+import random
+
+view = 0
+
+messages = [
+    "🎉💻 Nombre de vues depuis le lancement : {view} ! 🥳 On fait chauffer les serveurs de YouTube ! 🔥🚀",
+    "🚀✨ {view} vues et ça ne fait que commencer ! INSA en force ! 💪🎬",
+    "🔥💃 {view} vues ! Les STAPS commencent à sentir la pression... 🕺✨",
+    "🎯📈 {view} vues au compteur ! Vous êtes une machine à gagner ! 🤖🏆",
+    "🥳🍿 {view} vues ! On bat les records, une vue à la fois ! 🎬💥",
+    "💪🌟 {view} vues déjà ?! On est en route pour la légende ! 📜✨",
+    "🚨⚡ {view} vues ! Les STAPS demandent un temps mort... mais on continue ! 🏋️‍♂️🔥",
+    "🎬🔄 {view} vues enregistrées ! Le marathon des vidéos ne s’arrête jamais ! 🏃‍♀️📺",
+    "📊📈 {view} vues ! Le graphique explose, YouTube est impressionné ! 🤯🔥",
+    "💃🔥 {view} vues ! Les algorithmes n’en reviennent pas ! 🤖✨",
+    "⚡🎉 {view} vues et la victoire est proche ! Go INSA Rouen ! 🚀🏆",
+    "🎥📣 {view} vues ! Le bruit court que YouTube surveille... mais on continue ! 👀🔥",
+    "🌟🎯 {view} vues ! INSA = Inspiration Nationale de Succès Automatisé ! 🤖🎖️",
+    "🕺💥 {view} vues ! Les STAPS veulent se reconvertir en spectateurs. 🍿👀",
+    "⚙️🔧 {view} vues ! Ce script est un chef-d'œuvre, tout comme INSA ! 💻🏅",
+    "🤖📢 {view} vues ! On fait travailler les processeurs et les points montent ! 💥⚡",
+    "🔥🏋️ {view} vues ! YouTube appelle à l’aide... trop de succès ! 📞💻",
+    "🎉📺 {view} vues ! Les STAPS peuvent déjà préparer leurs excuses. 🤭🏆",
+    "🎯🎬 {view} vues ! On joue dans la ligue des champions. 🚀✨",
+    "🚀💥 {view} vues au compteur et toujours en pleine montée ! Go INSA Rouen ! 🏆💙"
+]
+
+def afficher_message(view):
+    global messages
+    message = random.choice(messages)  # Sélectionne un message aléatoire
+    print(message.format(view=view))
 
 def get_edge_version():
     """Get the version of the installed Microsoft Edge browser."""
@@ -117,6 +148,10 @@ def run_session(session_id, edge_driver_path):
                 time.sleep(130)
             finally:
                 print(f"💨 Session {session_id}: Wrapping up.")
+                global view
+                view = view + 1
+                afficher_message(view)
+
                 driver.quit()
                 url_queue.put(youtube_url)
         else:
